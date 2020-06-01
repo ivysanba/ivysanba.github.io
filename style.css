@@ -1,9 +1,423 @@
-.content{
-    font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: green;
+/* variables used for colors */
+:root{
+    --black-color:#0D3759 ;
+    --dark-blue:#154360;
+    --light-bg:#F0FFF0;
+    --light-teal:#D1F2EB;
+    --dark-grey:#566573;
+    --dark-teal:#66b2b2;
+}
+
+/* remove built-in margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+ /* set the main container propertiers */   
+.main-container{
+  display: flexbox;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+h1, h2, h3{
+  color: var(--dark-blue); 
+}
+
+body{
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 p{
-    font-size:15px;
+  font-size:14px;
+}
+
+/*---------------------------------------------C1-----------------------------*/
+/* container 1 header properties */
+.container-1-header{
+  height: 4em;
+  /* properties ad container */
+  display: flexbox;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: stretch;
+  background-color:var(--black-color) ;
+}
+
+/* style for header h1 */
+header h1{
+  font-weight: bold;
+  background-color:var(--light-teal) ;
+  margin: 0;
+  display: inline;
+  padding-left: 80px;
+}
+
+/* remove underline from title */
+header h1 a{
+  text-decoration: none;
+}
+
+/* elements of list taking only the space that they need */
+header nav ul li {
+  display: inline;
+}
+
+/* style for the header nav element */
+header nav {
+  float: right;
+  margin: 7px  0;
+  padding-right: 80px;
+}
+
+/* navigation porperties */
+header nav ul li a{
+  text-decoration: underline;
+  color:var(--light-teal) ;
+}
+
+
+/*---------------------------------------------C2-----------------------------*/
+
+/* container 2 hero properties */
+.container-2-hero{
+  display:flexbox;
+  flex-direction: row;
+  height: 15em;
+  position: relative;
+
+  background-image: url("./assets/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* Hero-Form Style Start */
+.mission-statement {
+
+  right: 10px; 
+  position: absolute;
+  padding: 20px;
+  bottom: -9em;
+  float: right;
+  align-self: flex-end;
+
+}
+
+.container-2-hero h2 a{
+  background-color: var(--light-teal);
+}
+
+/*---------------------------------------------C3-----------------------------*/
+/* container 3 about me properties */
+.container-3-about-me{
+  background-color:var( --light-bg);
+  height: 12em;
+  display:flex;
+  flex-direction: row;
+  /* if smaller display change to flex-direction: column */
+  padding:1em;
+}
+
+.c3-title{
+  background-color:var( --light-bg);
+  flex: 1;
+}
+
+.container-3-about-me div h1{
+  text-align:right;
+  border-right: 5px solid var(--black-color);
+  padding-right:0.5em;
+}
+
+.c3-content{
+  background-color:var( --light-bg);
+  flex: 4;
+}
+
+.c3-content p{
+  padding-left:1.5em;
+  padding-right:0.5em;
+}
+
+/*---------------------------------------------C4-----------------------------*/
+/* container 4 work properties */
+.container-4-work{
+  background-color:var( --light-bg);
+  height: 30em;
+  display:flex;
+  flex-direction: row;
+  padding:1em;
+}
+
+
+.container-4-work div h1{
+  text-align:right;
+  border-right: 5px solid var(--black-color);
+  padding-right:0.5em;
+}
+
+.c4-title{
+  background-color:var( --light-bg);
+  flex: 1;
+}
+
+.c4-content{
+  background-color:var( --light-bg);
+  flex: 4;
+}
+
+
+/*  Grid Container */
+.grid-container{
+  padding-left:1.5em;
+  padding-right:0.5em;
+  /* for the internal elements of the grid */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-flow: dense;
+}
+
+/* grid items */
+.grid-item {
+  display: flexbox;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border: 5px solid var(--dark-teal);
+  /*margin: 5px auto;*/
+  border-radius: 5px;
+  /*font-size: 35px;*/
+  background-color: pink;
+}
+
+.grid-content a, p{
+  height: auto !important;
+}
+
+
+
+/*---------------------- Item 1 Grid Surf ---------------------- */
+.item1-surf-report {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  background-image: url("./assets/images/surf.JPG");
+  background-size: cover;
+  background-position: center;
+  position:relative;
+}
+
+.surf-report-content{
+  margin-bottom: 0.5ems;
+}
+
+.surf-report-content h2 a{
+  height:3em!important;
+  min-width: 6em;
+  position: absolute;
+  bottom:0.5em;
+  background-color:var(--dark-teal); 
+}
+
+.surf-report-content p{
+  height:3em!important;
+  position: absolute;
+  bottom:0.5em;
+}
+
+
+
+/*---------------------- Item 2 Grid Led Wall ---------------------- */
+
+.item2-led-wall{
+  background-image: url("./assets/images/wall.JPEG");
+  background-size: cover;
+  background-position: center;
+  position:relative;
+}
+
+.led-wall-content{
+  margin-bottom: 0.5em; 
+}
+
+.led-wall-content h2 a{
+  height:3em!important;
+  min-width: 6em;
+  position: absolute;
+  bottom:0.5em;
+  background-color:var(--dark-teal);
+}
+
+.led-wall-content p{
+  height:3em!important;
+  position: absolute;
+  bottom:0.5em;
+}
+
+
+/*---------------------- Item 3 Grid Calculator ---------------------- */
+.item3-calculator{
+  background-image: url("./assets/images/calc.PNG");
+  background-size: cover;
+  background-position: center;
+  position:relative;
+}
+
+.calculator-content{
+  margin-bottom: 0.5em; 
+}
+
+.calculator-content h2 a{
+  height:3em!important;
+  min-width: 6em;
+  position: absolute;
+  bottom:0.5em;
+  background-color:var(--dark-teal);
+}
+
+.calculator-content p{
+  height:3em!important;
+  position: absolute;
+  bottom:0.5em;
+}
+
+/*---------------------- Item 4 Pastel Puzzle ---------------------- */
+.item4-pastel-puzzles{
+  background-image: url("./assets/images/pastel.PNG");
+  background-size: cover;
+  background-position: center;
+  position:relative;
+}
+
+.pastel-puzzle-content{
+  margin-bottom: 0.5em; 
+}
+
+.pastel-puzzle-content h2 a{
+  height:3em!important;
+  min-width: 6em;
+  position: absolute;
+  bottom:0.5em;
+  background-color:var(--dark-teal);
+}
+
+.pastel-puzzle-content p{
+  height:3em!important;
+  position: absolute;
+  bottom:0;
+}
+/*---------------------- Item 5 Run Buddy ---------------------- */
+.item5-run-buddy{
+  background-image: url("./assets/images/run.PNG");
+  background-size: cover;
+  background-position: center;
+  position:relative;
+}
+
+.run-buddy-content{
+  margin-bottom: 0.5em; 
+}
+
+.run-buddy-content h2 a{
+  height:3em!important;
+  min-width: 6em;
+  position: absolute;
+  bottom:0.5em;
+  background-color:var(--dark-teal);
+  text-decoration:none;
+  color: var(--dark-blue);
+}
+
+.run-buddy-content p{
+  height:3em!important;
+  position: absolute;
+  bottom:0;
+}
+
+
+/*---------------------------------------------C5-----------------------------*/
+/* container 5 conntact me properties */
+.container-5-contact-me{
+  background-color:var( --light-bg);
+  height: 6em;
+  display:flex;
+  flex-direction: row;
+  /* if smaller display change to flex-direction: column */
+  padding:1em;
+}
+
+.c5-title{
+  background-color:var( --light-bg);
+  flex: 1;
+}
+
+.container-5-contact-me div h1{
+  text-align:right;
+  border-right: 5px solid var(--black-color);
+  padding-right:0.5em;
+}
+
+.c5-content{
+  background-color:var( --light-bg);
+  flex: 4;
+}
+
+.c5-content p{
+  padding-left:1.5em;
+  padding-right:0.5em;
+}
+
+/*---------------------grid contact me ----------------------*/
+
+/*  Grid Container */
+.grid-container-contact{
+  padding-left:1.5em;
+  padding-right:0.5em;
+  /* for the internal elements of the grid */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  grid-auto-flow: dense;
+  justify-content: center;
+  margin-bottom: 3em; 
+}
+
+.grid-item-contact{
+  display: inline-block;
+}
+
+.grid-content-contact{
+  text-align: center !important;
+}
+
+/* navigation porperties */
+.grid-content-contact h3 a{
+  text-decoration: underline;
+  color:var(--dark-blue); 
+}
+
+/*---------------------------------------------C6-----------------------------*/
+/* container 6 footer properties */
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4em;
+  width: 100%; 
+  background-color:var(--black-color);  
+  padding-top: 2em;
+  padding-bottom:3em;
+  bottom: 0px;
+}
+
+#container-6-footer h4{
+  width: 100%;
+  background-color:var(--black-color);  
+  color:var( --light-bg);  
 }
