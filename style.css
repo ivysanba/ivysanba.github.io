@@ -39,7 +39,7 @@ p{
 /*---------------------------------------------C1-----------------------------*/
 /* container 1 header properties */
 .container-1-header{
-  height: 4em;
+  height: 5em;
   /* properties ad container */
   display: flexbox;
   flex-direction: row;
@@ -47,6 +47,8 @@ p{
   align-content: stretch;
   background-color:var(--black-color) ;
 }
+
+
 
 /* style for header h1 */
 header h1{
@@ -57,12 +59,14 @@ header h1{
   padding-left: 80px;
 }
 
+
 /* remove underline from title */
 header h1 a{
   text-decoration: none;
 }
 
 /* elements of list taking only the space that they need */
+
 header nav ul li {
   display: inline;
 }
@@ -115,14 +119,29 @@ header nav ul li a{
 
 /*---------------------------------------------C3-----------------------------*/
 /* container 3 about me properties */
-.container-3-about-me{
-  background-color:var( --light-bg);
-  height: 12em;
-  display:flex;
-  flex-direction: row;
-  /* if smaller display change to flex-direction: column */
-  padding:1em;
+
+@media (min-width: 715px){
+  .container-3-about-me{
+    background-color:var( --light-bg);
+    height: 12em;
+    display:flex;
+    flex-direction: row;
+    /* if smaller display change to flex-direction: column */
+    padding:1em;
+  }
 }
+
+@media (max-width: 714px){
+  .container-3-about-me{
+    background-color:var( --light-bg);
+    height: 12em;
+    display:flex;
+    flex-direction: column;
+    /* if smaller display change to flex-direction: column */
+    padding:1em;
+  }
+}
+
 
 .c3-title{
   background-color:var( --light-bg);
@@ -147,14 +166,25 @@ header nav ul li a{
 
 /*---------------------------------------------C4-----------------------------*/
 /* container 4 work properties */
-.container-4-work{
-  background-color:var( --light-bg);
-  height: 30em;
-  display:flex;
-  flex-direction: row;
-  padding:1em;
+@media (min-width: 715px){
+  .container-4-work{
+    background-color:var( --light-bg);
+    height: 30em;
+    display:flex;
+    flex-direction: row;
+    padding:1em;
+  }
 }
 
+@media (max-width: 714px){
+  .container-4-work{
+    background-color:var( --light-bg);
+    height: 60em;
+    display:flex;
+    flex-direction: column;
+    padding:1em;
+  }
+}
 
 .container-4-work div h1{
   text-align:right;
@@ -162,28 +192,58 @@ header nav ul li a{
   padding-right:0.5em;
 }
 
-.c4-title{
-  background-color:var( --light-bg);
-  flex: 1;
-}
-
-.c4-content{
-  background-color:var( --light-bg);
-  flex: 4;
-}
 
 
-/*  Grid Container */
-.grid-container{
-  padding-left:1.5em;
-  padding-right:0.5em;
-  /* for the internal elements of the grid */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 20px;
-  grid-auto-flow: dense;
+@media (min-width: 715px){
+
+  .c4-title{
+    background-color:var( --light-bg);
+    flex: 1;
+  }
+  
+  .c4-content{
+    background-color:var( --light-bg);
+    flex: 4;
+  }
+  /*  Grid Container */
+  .grid-container{
+    padding-left:1.5em;
+    padding-right:0.5em;
+    /* for the internal elements of the grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+  }
 }
+
+@media (max-width: 714px){
+
+  .c4-title{
+    background-color:var( --light-bg);
+    flex: 0.5;
+
+  }
+
+  .c4-content{
+    background-color:var( --light-bg);
+    flex: 6;
+
+  }
+  /*  Grid Container */
+
+  .grid-container{
+    padding-left:1.5em;
+    padding-right:0.5em;
+    /* for the internal elements of the grid */
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+  }
+}
+
 
 /* grid items */
 .grid-item {
@@ -204,13 +264,25 @@ header nav ul li a{
 
 
 /*---------------------- Item 1 Grid Surf ---------------------- */
-.item1-surf-report {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
-  background-image: url("./assets/images/surf.JPG");
-  background-size: cover;
-  background-position: center;
-  position:relative;
+
+@media (min-width: 715px){
+  .item1-surf-report {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    background-image: url("./assets/images/surf.JPG");
+    background-size: cover;
+    background-position: center;
+    position:relative;
+  } 
+}
+
+@media (max-width: 714px){
+  .item1-surf-report {
+    background-image: url("./assets/images/surf.JPG");
+    background-size: cover;
+    background-position: center;
+    position:relative;
+  } 
 }
 
 .surf-report-content{
@@ -343,13 +415,26 @@ header nav ul li a{
 
 /*---------------------------------------------C5-----------------------------*/
 /* container 5 conntact me properties */
-.container-5-contact-me{
-  background-color:var( --light-bg);
-  height: 6em;
-  display:flex;
-  flex-direction: row;
-  /* if smaller display change to flex-direction: column */
-  padding:1em;
+@media (min-width: 715px){
+  .container-5-contact-me{
+    background-color:var( --light-bg);
+    height: 6em;
+    display:flex;
+    flex-direction: row;
+    /* if smaller display change to flex-direction: column */
+    padding:1em;
+  }
+}
+
+@media (max-width: 714px){
+  .container-5-contact-me{
+    background-color:var( --light-bg);
+    height: 24em;
+    display:flex;
+    flex-direction: column;
+    /* if smaller display change to flex-direction: column */
+    padding:1em;
+  }
 }
 
 .c5-title{
@@ -376,18 +461,34 @@ header nav ul li a{
 /*---------------------grid contact me ----------------------*/
 
 /*  Grid Container */
-.grid-container-contact{
-  padding-left:1.5em;
-  padding-right:0.5em;
-  /* for the internal elements of the grid */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 25px;
-  grid-auto-flow: dense;
-  justify-content: center;
-  margin-bottom: 3em; 
+
+@media (min-width: 715px){
+  .grid-container-contact{
+    padding-left:1.5em;
+    padding-right:0.5em;
+    /* for the internal elements of the grid */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    grid-auto-flow: dense;
+    justify-content: center;
+    margin-bottom: 3em; 
+  }
 }
 
+@media (max-width: 714px){
+  .grid-container-contact{
+    padding-left:1.5em;
+    padding-right:0.5em;
+    /* for the internal elements of the grid */
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 25px;
+    grid-auto-flow: dense;
+    justify-content: center;
+    margin-bottom: 3em; 
+  }
+}
 .grid-item-contact{
   display: inline-block;
 }
