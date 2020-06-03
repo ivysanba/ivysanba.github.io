@@ -494,7 +494,7 @@ header nav ul li a{
 /*---------------------------------------------Media Queries----------------------------*/
 
 
-@media (min-width: 715px){
+@media screen and (min-width: 715px){
 
   /* container 3 about me properties */
   .container-3-about-me{
@@ -515,7 +515,7 @@ header nav ul li a{
 
 }
 
-@media (max-width: 714px) and (min-width: 481px){
+@media screen and (max-width: 714px) and (min-width: 481px){
 
   /* container 3 about me properties */
   .container-3-about-me{
@@ -537,7 +537,38 @@ header nav ul li a{
 }
 
 
-@media (max-width: 480px){
+@media screen and (max-width: 480px){
+
+  /* global properties */
+
+    h1, h2, h3, h4{
+    font-size: medium;
+  }
+
+  /* container 3 about me properties */
+  .container-3-about-me{
+    height: 24em;
+    display:flex;
+    flex-direction: column;
+    /* if smaller display change to flex-direction: column */
+    padding:1em;
+  }
+
+  .c3-title{
+    background-color:var( --light-bg);
+    flex: 1;
+  }
+
+  /* container 4 work properties */
+  .container-4-work{
+    height: 60em;
+    display:flex;
+    flex-direction: column;
+    padding:1em;
+  }
+}
+
+@media screen and (max-device-width: 480px), screen and (max-width:480px){
 
   /* global properties */
 
