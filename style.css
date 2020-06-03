@@ -120,28 +120,9 @@ header nav ul li a{
 /*---------------------------------------------C3-----------------------------*/
 /* container 3 about me properties */
 
-@media (min-width: 715px){
-  .container-3-about-me{
-    background-color:var( --light-bg);
-    height: 12em;
-    display:flex;
-    flex-direction: row;
-    /* if smaller display change to flex-direction: column */
-    padding:1em;
-  }
+.container-3-about-me{
+  background-color:var( --light-bg);
 }
-
-@media (max-width: 714px){
-  .container-3-about-me{
-    background-color:var( --light-bg);
-    height: 12em;
-    display:flex;
-    flex-direction: column;
-    /* if smaller display change to flex-direction: column */
-    padding:1em;
-  }
-}
-
 
 .c3-title{
   background-color:var( --light-bg);
@@ -166,25 +147,12 @@ header nav ul li a{
 
 /*---------------------------------------------C4-----------------------------*/
 /* container 4 work properties */
-@media (min-width: 715px){
-  .container-4-work{
-    background-color:var( --light-bg);
-    height: 30em;
-    display:flex;
-    flex-direction: row;
-    padding:1em;
-  }
+
+.container-4-work{
+  background-color:var( --light-bg);
+
 }
 
-@media (max-width: 714px){
-  .container-4-work{
-    background-color:var( --light-bg);
-    height: 60em;
-    display:flex;
-    flex-direction: column;
-    padding:1em;
-  }
-}
 
 .container-4-work div h1{
   text-align:right;
@@ -521,4 +489,81 @@ header nav ul li a{
   width: 100%;
   background-color:var(--black-color);  
   color:var( --light-bg);  
+}
+
+/*---------------------------------------------Media Queries----------------------------*/
+
+
+@media (min-width: 715px){
+
+  /* container 3 about me properties */
+  .container-3-about-me{
+    height: 12em;
+    display:flex;
+    flex-direction: row;
+    /* if smaller display change to flex-direction: column */
+    padding:1em;
+  }
+
+/* container 4 work properties */
+.container-4-work{
+  height: 30em;
+  display:flex;
+  flex-direction: row;
+  padding:1em;
+}
+
+}
+
+@media (max-width: 714px) and (min-width: 481px){
+
+  /* container 3 about me properties */
+  .container-3-about-me{
+    height: 12em;
+    display:flex;
+    flex-direction: column;
+    /* if smaller display change to flex-direction: column */
+    padding:1em;
+  }
+
+
+  /* container 4 work properties */
+  .container-4-work{
+    height: 60em;
+    display:flex;
+    flex-direction: column;
+    padding:1em;
+  }
+}
+
+
+@media (max-width: 480px){
+
+  /* global properties */
+
+    h1, h2, h3, h4{
+    font-size: medium;
+  }
+
+  /* container 3 about me properties */
+  .container-3-about-me{
+    height: 24em;
+    display:flex;
+    flex-direction: column;
+    /* if smaller display change to flex-direction: column */
+    padding:1em;
+  }
+
+  .c3-title{
+    background-color:var( --light-bg);
+    flex: 1;
+  }
+
+  /* container 4 work properties */
+  .container-4-work{
+    height: 60em;
+    display:flex;
+    flex-direction: column;
+    padding:1em;
+  }
 }
