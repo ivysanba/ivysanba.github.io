@@ -566,7 +566,54 @@ header nav ul li a{
     flex-direction: column;
     padding:1em;
   }
+
 }
+
+@media screen and (max-device-width: 480px), screen and (max-width:480px){
+
+  /* global properties */
+
+    h1, h2, h3, h4{
+    font-size: medium;
+  }
+
+  /* container 3 about me properties */
+  .container-3-about-me{
+    height: 24em;
+    display:flex;
+    flex-direction: column;
+    /* if smaller display change to flex-direction: column */
+    padding:1em;
+  }
+
+  .c3-title{
+    background-color:var( --light-bg);
+    flex: 0.25;
+  }
+
+  /* container 4 work properties */
+  .container-4-work{
+    height: 60em;
+    display:flex;
+    flex-direction: column;
+    padding:1em;
+  }
+
+  .c4-title{
+    flex: 0.25;
+  }
+
+  .grid-content p{
+    font-size: x-small;
+  }
+
+  /* footer */
+  .footer a{
+  font-size: small !important;
+  }
+}
+
+
 
 @supports (-webkit-touch-callout: none) {
   @media screen and (max-device-width: 480px), screen and (max-width:480px){
@@ -602,6 +649,14 @@ header nav ul li a{
     .c4-title{
       flex: 0.25;
     }
+
+    .grid-content p{
+      font-size: x-small;
+    }
     
+    /* footer */
+    .footer a{
+    font-size: small !important;
+    }
   }
 }
