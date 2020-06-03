@@ -588,7 +588,7 @@ header nav ul li a{
 
     .c3-title{
       background-color:var( --light-bg);
-      flex: 1;
+      flex: 0.25;
     }
 
     /* container 4 work properties */
@@ -598,5 +598,10 @@ header nav ul li a{
       flex-direction: column;
       padding:1em;
     }
+
+    .c4-title{
+      flex: 0.25;
+    }
+    
   }
 }
